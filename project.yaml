@@ -17,3 +17,17 @@ actions:
       outputs:
         moderately_sensitive:
           cohort: output/descriptive.png
+
+  describe1:
+      run: python:latest python analysis/report1.py
+      needs: [generate_study_population]
+      outputs:
+        moderately_sensitive:
+          cohort: output/descriptive1.png
+
+  describe2:
+      run: python:latest python analysis/report2.py
+      needs: [generate_study_population]
+      outputs:
+        moderately_sensitive:
+          cohort: output/descriptive2.png
